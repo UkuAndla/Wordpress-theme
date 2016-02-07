@@ -1,11 +1,6 @@
 Lecture Description
-In this lecture, we're going to take a look at the final WordPress website we're going to have built by the end of the course. You'll see:
+In this lecture:
+Bootstrap is the most popular front-end framework on the web today. In this lecture, I talk about how learning to properly use Bootstrap can save yourself hundreds of hours, and increase your work output by up to 100%.
 
-The beautiful, custom home page
-Dynamic testimonials
-How to edit the logo in the WordPress customizer
-The custom blog page
-How to add dynamic resources
-Contact page
-The WordPress admin panel
+
 There are no available downloads for this lecture.
