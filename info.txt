@@ -1,3 +1,4 @@
 Lecture Description
 In this lecture:
-With millions of websites powered with it, WordPress is the most popular free CMS software on the web. WordPress powers websites for The New Yorker, Beyoncé, Smart Passive Income with Pat Flynn, John Mayer, and even my own blog! WordPress gives you the ability to create robust websites that allow your clients to update their website by themselves.
+ecture Description
++In this lecture we're going to download the Bootstrap framework. Please keep in mind that this course was built Bootstrap v3.3.1, so we'll be using that version. However, it's always a good idea to use the latest software version for any project, so once you've completed the course, update your Bootstrap version and challenge yourself to make sure everything is compatible!
