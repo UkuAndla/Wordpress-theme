@@ -1,6 +1,3 @@
 Lecture Description
 In this lecture:
-Bootstrap is the most popular front-end framework on the web today. In this lecture, I talk about how learning to properly use Bootstrap can save yourself hundreds of hours, and increase your work output by up to 100%.
-
-
-There are no available downloads for this lecture.
+With millions of websites powered with it, WordPress is the most popular free CMS software on the web. WordPress powers websites for The New Yorker, Beyoncé, Smart Passive Income with Pat Flynn, John Mayer, and even my own blog! WordPress gives you the ability to create robust websites that allow your clients to update their website by themselves.
