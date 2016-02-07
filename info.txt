@@ -1,0 +1,11 @@
+Lecture Description
+In this lecture, we're going to take a look at the final WordPress website we're going to have built by the end of the course. You'll see:
+
+The beautiful, custom home page
+Dynamic testimonials
+How to edit the logo in the WordPress customizer
+The custom blog page
+How to add dynamic resources
+Contact page
+The WordPress admin panel
+There are no available downloads for this lecture.
