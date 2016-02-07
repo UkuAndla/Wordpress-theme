@@ -1,4 +1,5 @@
 Lecture Description
 In this lecture:
-ecture Description
-+In this lecture we're going to download the Bootstrap framework. Please keep in mind that this course was built Bootstrap v3.3.1, so we'll be using that version. However, it's always a good idea to use the latest software version for any project, so once you've completed the course, update your Bootstrap version and challenge yourself to make sure everything is compatible!
+
+Lecture Description
+In this lecture, we'll download the course files and I'll explain the contents of each of the folders.
