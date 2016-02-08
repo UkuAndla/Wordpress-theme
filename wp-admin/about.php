@@ -156,6 +156,7 @@ $tech_features = array(
 		</div>
 
 		<div class="changelog">
+
 			<h3><?php _e( 'Under the Hood' ); ?></h3>
 
 			<div class="feature-section under-the-hood three-col">
