@@ -12,6 +12,7 @@
  */
 get_header(); ?>
 
+
 <section class="feature-image feature-image-default-alt" data-type="background" data-speed="2">
     <h1 class="page-title">Blog</h1>
 </section>
