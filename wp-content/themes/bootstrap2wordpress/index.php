@@ -16,7 +16,6 @@ get_header(); ?>
     <h1 class="page-title">Blog</h1>
 </section>
 
-
 <!-- BLOG CONTENT
 ================================================== -->
 <div class="container">
