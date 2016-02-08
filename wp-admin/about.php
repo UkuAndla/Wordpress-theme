@@ -169,7 +169,6 @@ $tech_features = array(
 			</div>
 
 
-
 			<div class="return-to-dashboard">
 				<?php if ( current_user_can( 'update_core' ) && isset( $_GET['updated'] ) ) : ?>
 					<a href="<?php echo esc_url( self_admin_url( 'update-core.php' ) ); ?>">
