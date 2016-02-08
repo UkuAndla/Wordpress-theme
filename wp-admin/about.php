@@ -166,6 +166,7 @@ $tech_features = array(
 			</div>
 
 		</div>
+
 	</div>
 <?php
 include( ABSPATH . 'wp-admin/admin-footer.php' );
