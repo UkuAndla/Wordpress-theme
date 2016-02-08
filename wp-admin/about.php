@@ -156,7 +156,6 @@ $tech_features = array(
 		</div>
 
 		<div class="changelog">
-
 			<h3><?php _e( 'Under the Hood' ); ?></h3>
 
 			<div class="feature-section under-the-hood three-col">
@@ -167,7 +166,6 @@ $tech_features = array(
 				</div>
 				<?php endforeach; ?>
 			</div>
-
 
 			<div class="return-to-dashboard">
 				<?php if ( current_user_can( 'update_core' ) && isset( $_GET['updated'] ) ) : ?>
