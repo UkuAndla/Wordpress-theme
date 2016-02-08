@@ -402,6 +402,12 @@ function wp_read_image_metadata( $file ) {
 		}
 	}
 
+	foreach ( $meta as &$value ) {
+				if ( is_string( $value ) ) {
+						$value = wp_kses_post( $value );
+					}
+	}
+
 	foreach ( array( 'title', 'caption', 'credit', 'copyright', 'camera', 'iso' ) as $key ) {
 		if ( $meta[ $key ] && ! seems_utf8( $meta[ $key ] ) ) {
 			$meta[ $key ] = utf8_encode( $meta[ $key ] );
