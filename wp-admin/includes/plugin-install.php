@@ -403,6 +403,7 @@ function install_plugin_install_status($api, $loop = false) {
 						return install_plugin_install_status($api, true);
 					}
 				}
+
 			}
 		} else {
 			// "install" & no directory with that slug
