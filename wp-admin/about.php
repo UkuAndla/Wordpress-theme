@@ -5,17 +5,23 @@
  * @package WordPress
  * @subpackage Administration
  */
+
 /** WordPress Administration Bootstrap */
 require_once( dirname( __FILE__ ) . '/admin.php' );
+
 wp_enqueue_style( 'wp-mediaelement' );
 wp_enqueue_script( 'wp-mediaelement' );
 wp_localize_script( 'mediaelement', '_wpmejsSettings', array(
 	'pluginPath' => includes_url( 'js/mediaelement/', 'relative' ),
 	'pauseOtherPlayers' => ''
 ) );
+
 $title = __( 'About' );
+
 list( $display_version ) = explode( '-', $wp_version );
+
 include( ABSPATH . 'wp-admin/admin-header.php' );
+
 $video_url = 'https://videopress.com/embed/T54Iy7Tw';
 $locale    = str_replace( '_', '-', get_locale() );
 if ( 'en-AU' !== $locale ) {
@@ -24,6 +30,7 @@ if ( 'en-AU' !== $locale ) {
 if ( 'en' !== $locale ) {
 	$video_url = add_query_arg( 'defaultLangCode', $locale, $video_url );
 }
+
 $major_features = array(
 	array(
 		'src'         => array(
@@ -52,6 +59,7 @@ $major_features = array(
 	),
 );
 shuffle( $major_features );
+
 $minor_features = array(
 	array(
 		'src'         => 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIj48cGF0aCBmaWxsPSIjMDBhMGQyIiBkPSJNNTAgMjE1aDI0MHYzMEg1MHpNNTAgMjc1aDI0MHYzMEg1MHpNNTAgMTU1aDI0MHYzMEg1MHpNNTAgOTVoMjQwdjMwSDUwek0zMTAuMSA5NWwxOS45IDMwIDIwLjEtMzAiLz48L3N2Zz4=',
@@ -69,6 +77,7 @@ $minor_features = array(
 		'description' => __( 'Wherever you are on the front-end, you can click the customize link in the toolbar to swiftly make changes to your site.' ),
 	),
 );
+
 $tech_features = array(
 	array(
 		'heading'     => __( 'Taxonomy Roadmap' ),
@@ -84,6 +93,7 @@ $tech_features = array(
 		'description' => __( 'List tables can and should designate a primary column.' ),
 	),
 );
+
 ?>
 	<div class="wrap about-wrap">
 		<h1><?php printf( __( 'Welcome to WordPress&nbsp;%s' ), $display_version ); ?></h1>
@@ -106,41 +116,42 @@ $tech_features = array(
 
 		<div class="feature-section two-col">
 			<?php foreach ( $major_features as $feature ) : ?>
-				<div class="col">
-					<div class="media-container">
-						<?php
-						// Video.
-						if ( is_array( $feature['src'] ) ) :
-							echo wp_video_shortcode( array(
-								'mp4'      => $feature['src']['mp4'],
-								'ogv'      => $feature['src']['ogv'],
-								'webm'     => $feature['src']['webm'],
-								'loop'     => true,
-								'autoplay' => true,
-								'width'    => 500,
-								'height'   => 284
-							) );
-						// Image.
-						else:
-							?>
-							<img src="<?php echo esc_url( $feature['src'] ); ?>" />
-						<?php endif; ?>
-					</div>
-					<h3><?php echo $feature['heading']; ?></h3>
-					<p><?php echo $feature['description']; ?></p>
+			<div class="col">
+				<div class="media-container">
+					<?php
+					// Video.
+					if ( is_array( $feature['src'] ) ) :
+						echo wp_video_shortcode( array(
+							'mp4'      => $feature['src']['mp4'],
+							'ogv'      => $feature['src']['ogv'],
+							'webm'     => $feature['src']['webm'],
+							'loop'     => true,
+							'autoplay' => true,
+							'width'    => 500,
+							'height'   => 284
+						) );
+
+					// Image.
+					else:
+					?>
+					<img src="<?php echo esc_url( $feature['src'] ); ?>" />
+					<?php endif; ?>
 				</div>
+				<h3><?php echo $feature['heading']; ?></h3>
+				<p><?php echo $feature['description']; ?></p>
+			</div>
 			<?php endforeach; ?>
 		</div>
 
 		<div class="feature-section three-col">
 			<?php foreach ( $minor_features as $feature ) : ?>
-				<div class="col">
-					<div class="svg-container">
-						<img src="<?php echo esc_attr( $feature['src'] ); ?>" />
-					</div>
-					<h3><?php echo $feature['heading']; ?></h3>
-					<p><?php echo $feature['description']; ?></p>
+			<div class="col">
+				<div class="svg-container">
+					<img src="<?php echo esc_attr( $feature['src'] ); ?>" />
 				</div>
+				<h3><?php echo $feature['heading']; ?></h3>
+				<p><?php echo $feature['description']; ?></p>
+			</div>
 			<?php endforeach; ?>
 		</div>
 
@@ -149,10 +160,10 @@ $tech_features = array(
 
 			<div class="feature-section under-the-hood three-col">
 				<?php foreach ( $tech_features as $feature ) : ?>
-					<div class="col">
-						<h4><?php echo $feature['heading']; ?></h4>
-						<p><?php echo $feature['description']; ?></p>
-					</div>
+				<div class="col">
+					<h4><?php echo $feature['heading']; ?></h4>
+					<p><?php echo $feature['description']; ?></p>
+				</div>
 				<?php endforeach; ?>
 			</div>
 
@@ -166,25 +177,32 @@ $tech_features = array(
 			</div>
 
 		</div>
-
 	</div>
 <?php
+
 include( ABSPATH . 'wp-admin/admin-footer.php' );
+
 // These are strings we may use to describe maintenance/security releases, where we aim for no new strings.
 return;
+
 _n_noop( 'Maintenance Release', 'Maintenance Releases' );
 _n_noop( 'Security Release', 'Security Releases' );
 _n_noop( 'Maintenance and Security Release', 'Maintenance and Security Releases' );
+
 /* translators: 1: WordPress version number. */
 _n_noop( '<strong>Version %1$s</strong> addressed a security issue.',
-	'<strong>Version %1$s</strong> addressed some security issues.' );
+         '<strong>Version %1$s</strong> addressed some security issues.' );
+
 /* translators: 1: WordPress version number, 2: plural number of bugs. */
 _n_noop( '<strong>Version %1$s</strong> addressed %2$s bug.',
-	'<strong>Version %1$s</strong> addressed %2$s bugs.' );
+         '<strong>Version %1$s</strong> addressed %2$s bugs.' );
+
 /* translators: 1: WordPress version number, 2: plural number of bugs. Singular security issue. */
 _n_noop( '<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug.',
-	'<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs.' );
+         '<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs.' );
+
 /* translators: 1: WordPress version number, 2: plural number of bugs. More than one security issue. */
 _n_noop( '<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug.',
-	'<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs.' );
+         '<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs.' );
+
 __( 'For more information, see <a href="%s">the release notes</a>.' );
